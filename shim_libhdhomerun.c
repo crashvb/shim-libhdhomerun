@@ -15,5 +15,5 @@ uint32_t hdhomerun_control_get_local_addr(struct hdhomerun_control_sock_t *cs)
 		exit(1);
 	}
 
-	return inet_addr(shim_libhdhomerun_addr);
+	return htonl(inet_addr(shim_libhdhomerun_addr));
 }
